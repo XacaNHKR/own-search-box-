@@ -1,147 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-
-<body>
-    <div class=container id=banner>
-        <h1>DRAKWORRIOR ⚙️</h1>
-        
-<marquee behavior="" id="markq" direction="down">welcome here &#9888; &#9760;</marquee>
-
-        <div id=searchbar>
-            
-    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Want to learn more about a tool? Search for it here!" autofocus>
- <div id="searchResult" class="result" aria-live="polite"></div>
-    <i class=ti-search></i>
-            <ul id=search-result></ul>
-        </div>
-    </div>
-
-
-
-
-
-     
-  <div id="searchResult" class="result" aria-live="polite"></div>
-
-
-
-
-    
-
-
-
-
-<ul id="myUL">
-  <li><a href="#">Adele</a></li>
-  <li><a href="#">Agnes</a></li>
-
-  <li><a href="#">Billy</a></li>
-  <li><a href="#">Bob</a></li>
-
-  <li><a href="#">Calvin</a></li>
-  <li><a href="#">Christina</a></li>
-  <li><a href="#">Cindy</a></li>
-</ul>
-
-
-<script>
-
-//this is the main themes for keyword search
-    function myFunction() {
-    var input, filter, ul, li, a, i, txtValue;
-    input = document.getElementById("myInput");
-    filter = input.value.toUpperCase();
-    ul = document.getElementById("myUL");
-    li = ul.getElementsByTagName("li");
-    for (i = 0; i < li.length; i++) {
-        a = li[i].getElementsByTagName("a")[0];
-        txtValue = a.textContent || a.innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            li[i].style.display = "";
-        } else {
-            li[i].style.display = "none";
-        }
-    }
-}
-
-
-
-
-
-
-  
-  
-    const searchInput = document.getElementById('myInput');
-    const searchResult = document.getElementById('searchResult');
-    // Method to update the search result text based on input value
-    function updateSearchResult() {
-      const query = searchInput.value.trim();
-      if (query === '') {
-        searchResult.textContent = 'Please enter a search';
-        searchResult.style.color = '#0d0dcb';
-      } else {
-        // Example result text change - you can customize this logic
-        searchResult.textContent = `Searching for "${query}"...`;
-        searchResult.style.color = '#f50101';
-      }
-    }
-    // Update result text as user types
-    searchInput.addEventListener('input', updateSearchResult);
-    // Initialize result text on page load
-    updateSearchResult();
-
-
-
-
-
-
-
-</script>
-
-
-
-    <style>
-
-#markq{
- width: 600px;
-      max-width: 180px;
-      position: relative;
-      background: rgb(3, 248, 7);
-      border-radius: 24px;
-      box-shadow: 0 4px 8px rgba(241, 3, 214, 0.712);
-      padding: 8px 16px;
-      display: flex;
-      align-items: center;
-    height: 30px;
-width :80 px
-
- padding:120px;
-}
-
-
-        header {
-            background-image: url(https://www.kali.org/images/tools-banner.jpg)
-        }
-
-        #banner {
-            color: #a904e5;
+<style>
+      #banner {
+            color: #0762d2;
+            background-color: #73303084;
             text-align: center;
             padding: 80px 0;
             position: relative
         }
-
-        #banner h1 {
-            color: #0d0dcb;
-            text-shadow: 0 2px 5px rgba(0, 0, 0, .2)
+        #banner img{
+            width: 300px;
+            height: 200px;
         }
 
-        #banner p {
+        #banner h1 {
+            color: #f9fcfb;
+            text-shadow: 0 2px 5px rgba(2, 36, 32, 0.557)
+        }
+
+        #banner mark {
             color: #f50101;
             font-size: 20px;
             opacity: .8
@@ -150,7 +32,7 @@ width :80 px
         #searchbar {
             --input-height: 50px;
             position: relative;
-            width: 90%;
+            width: 50%;
             max-width: 500px;
             margin: auto
         }
@@ -248,7 +130,176 @@ width :80 px
         #search-result li:last-child a {
             color: #7d0303
         }
-    </style>
+</style>
+<body>
+     <div class=container id=banner>
+        <img src="hk.png" alt="" srcset="">
+        <h1>DRAKWORRIOR ⚙️</h1>
+        
+<marquee behavior="" id="markq" direction="down">welcome here &#9888; &#9760;</marquee>
+<br><br>
+        <div id=searchbar>
+            
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Want to learn more about a tool? Search for it here!" autofocus>
+ <div id="searchResult" class="result" aria-live="polite"></div>
+    <i class=ti-search></i>
+            <ul id=search-result></ul>
+        </div>
+    </div>
+
+
+
+
+
+
+<ul id="myli">
+  <mark><button onclick="wifitemn()">wifite manual</button> </mark>
+  <mark><button id="msfconsole()">msfconsole</button> </mark>
+
+  <mark><button>Billy</button> </mark>
+  <mark><button>Bob</button> </mark>
+
+  <mark><button>Calvin</button>  </mark>
+  <mark><button>Christina</button> </mark>
+  <mark><button>Cindy</button> </mark>
+</ui>
+
+
+
+ <button onclick="openForm()">Open Form</button>
+
+    <div id="myForm">
+        <h2>Text Data Form</h2>
+        <mark id="textData">This is your text data.</mark>
+        <button onclick="closeForm()">Close</button>
+    </div>
+
+   
+
+
+
+<script>
+
+ 
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+        }
+
+        function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+        }
+    
+
+    
+
+function myFunction() {
+    var input, filter, li,mark, button, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    li = document.getElementById("myli");
+   mark = li.getElementsByTagName("mark");
+    for (i = 0; i <mark.length; i++) {
+        button =mark[i].getElementsByTagName("button")[0];
+        txtValue = button.textContent || button.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+           mark[i].style.display = "";
+        } else {
+           mark[i].style.display = "none";
+        }
+    }
+}
+
+
+
+
+function wifitemn(){
+alert('hi');
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </body>
 </html>
